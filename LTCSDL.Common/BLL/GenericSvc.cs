@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace LTCSDL.Common.BLL
 {
-    using DAL;
+    using DAL;   
     using Rsp;
     public class GenericSvc<D, T> : IGenericSvc<T> where T : class where D : IGenericRep<T>, new()
     {
@@ -64,7 +64,7 @@ namespace LTCSDL.Common.BLL
             return _rep.Read(p);
         }
 
-
+       
         /// <summary>
         /// Read single object
         /// </summary>
@@ -110,13 +110,13 @@ namespace LTCSDL.Common.BLL
         /// Update the models
         /// </summary>
         /// <param name="l">List model</param>
-        /// <returns>Return the result</returns> 
+        /// <returns>Return the result</returns>
         public virtual MultipleRsp Update(List<T> l)
         {
             var res = new MultipleRsp();
 
             try
-            {
+            {    
                 _rep.Update(l);
             }
             catch (Exception ex)

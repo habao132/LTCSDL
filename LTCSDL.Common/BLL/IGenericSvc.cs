@@ -31,7 +31,7 @@ namespace LTCSDL.Common.BLL
         /// <returns>Return query data</returns>
         IQueryable<T> Read(Expression<Func<T, bool>> p);
 
-
+        
         /// <summary>
         /// Read single object
         /// </summary>
